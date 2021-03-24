@@ -44,11 +44,14 @@
         >
         </ika-card>
         <ika-card
-                title="Makimaki Stickers"
-                description='An iMessage sticker pack. Express your feelings with Makimaki.'
-                button-href="https://apps.apple.com/us/app/makimaki-stickers/id1550426134"
-                button-text="App store"
-                color="dark"
+                title="SO 19 Developer Survey Vis"
+                description='A interactive visualization system displaying results of Stack Overflow 2019 developer survey.'
+                button-href="https://github.com/innkuika/SO2019DeveloperSurveyVis"
+                button-text="GitHub"
+                button2-href="https://ikashima.net/so19"
+                button2-text="Go"
+                color="red"
+                image="images/so-19-developer-survey-vis.jpeg"
         >
         </ika-card>
     </div>
@@ -71,35 +74,36 @@
                 color="dark"
         >
         </ika-card>
-
-    </div>
-    <div>
-        <ika-card
-                title="SO 19 Developer Survey Vis"
-                description='A interactive visualization system displaying results of Stack Overflow 2019 developer survey.'
-                button-href="https://github.com/innkuika/SO2019DeveloperSurveyVis"
-                button-text="GitHub"
-                button2-href="https://ikashima.net/so19"
-                button2-text="Go"
-                color="dark"
-                image="images/so-19-developer-survey-vis.png"
-        >
-        </ika-card>
-        <ika-card
-                title="Othello (board game)"
-                description='Othello (board game) with a GUI and bots using C++ and Qt.'
-                button-href="https://github.com/innkuika/CISC220LAB3beta"
-                button-text="GitHub"
-                color="yellow"
-        >
-        </ika-card>
-
         <ika-card
                 title="Big-and-small (dice game)"
                 description='The game asks the player to bet big or small using a physical button and display. The player then rolls the dice by shaking the Pi and sees the result on the display. Implemented big-and-small (dice game) on Raspberry Pi using C.'
                 color="dark"
         >
         </ika-card>
+
+    </div>
+    <div>
+        <ika-card
+                title="Makimaki Stickers"
+                description='An iMessage sticker pack. Express your feelings with Makimaki.'
+                button-href="https://apps.apple.com/us/app/makimaki-stickers/id1550426134"
+                button-text="App store"
+                color="blue"
+                image="images/makimaki-thumbnail.jpeg"
+        >
+        </ika-card>
+
+        <ika-card
+                title="Othello (board game)"
+                description='Othello (board game) with a GUI and bots using C++ and Qt.'
+                button-href="https://github.com/innkuika/CISC220LAB3beta"
+                button-text="GitHub"
+                color="dark"
+                image="images/othello-thumbnail.jpeg"
+        >
+        </ika-card>
+
+
 
 
     </div>
@@ -113,12 +117,13 @@
     }
 </style>
 <script>
+
     class IkaCard extends HTMLElement {
-        MaxButtons = 2
+
 
         constructor() {
             super();
-
+            const MaxButtons = 2
             // figure out color
             const color = this.getAttribute("color")
             let colorClass = ''
@@ -129,7 +134,10 @@
             } else if (color === "yellow") {
                 [bgColor, bgOpacity, textColor, buttonColor, buttonHoverColor, buttonTextColor, borderHoverColor]
                     = ["bg-yellow-300", "bg-opacity-20", "text-gray-800", "bg-yellow-500", "bg-green-300", "text-gray-100", "border-gray-50"]
-            } else if (color === 'dark') {
+            } else if (color === "blue") {
+                [bgColor, bgOpacity, textColor, buttonColor, buttonHoverColor, buttonTextColor, borderHoverColor]
+                    = ["bg-blue-400", "bg-opacity-20", "text-gray-50", "bg-blue-500", "bg-green-300", "text-gray-100", "border-gray-50"]
+            }else if (color === 'dark') {
                 [bgColor, bgOpacity, textColor, buttonColor, buttonHoverColor, buttonTextColor, borderHoverColor]
                     = ["bg-gray-200", "bg-opacity-20", "text-gray-700", "bg-blue-400", "bg-green-300", "text-gray-50", "border-gray-50"]
             } else if (color === 'red') {
