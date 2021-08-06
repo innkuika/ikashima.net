@@ -36,6 +36,7 @@
     <div>
         <ika-card
                 title="noiton"
+                date="Summer 2021"
                 description='noiton is a my replica of Notion (notion.so). It uses ReactJS on frontend, NodeJS and TypeScript on backend. Building this app helps me to understand how offline-first web application works.'
                 button-href="https://noiton.co"
                 button-text="Demo"
@@ -47,6 +48,7 @@
         </ika-card>
         <ika-card
                 title="Google+ Archive Viewer"
+                date="Winter 2020"
                 description='A simple website to view my Google+ archive with search capability'
                 button-href="https://github.com/innkuika/gpav"
                 button-text="GitHub"
@@ -58,6 +60,7 @@
         </ika-card>
         <ika-card
                 title="SO 19 Developer Survey Vis"
+                date="Winter 2020"
                 description='A interactive visualization system displaying results of Stack Overflow 2019 developer survey.'
                 button-href="https://github.com/innkuika/SO2019DeveloperSurveyVis"
                 button-text="GitHub"
@@ -69,6 +72,7 @@
         </ika-card>
         <ika-card
                 title="Auto-scheduling todo application"
+                date="Summer 2020"
                 description='A command-line application that creates todo tasks for students based on deadlines and office hours using Python and Airtable API.'
                 button-href="https://github.com/innkuika/ikatodo"
                 button-text="GitHub"
@@ -79,6 +83,7 @@
     <div>
         <ika-card
                 title="triv.io"
+                date="Winter 2020"
                 description='triv.io is a CS Trivia App that allows users to play with their friends and create new categories or even add to existing ones. The app will allow users to send instances of the quiz game to their friends, and allows them to test their knowledge of the particular category.'
                 button-href="https://apps.apple.com/us/app/triv-io/id1555610108"
                 button-text="App Store"
@@ -88,6 +93,7 @@
         </ika-card>
         <ika-card
                 title="Cashy Cash"
+                date="Winter 2020"
                 description='Cashy Cash is a digital wallet mockup which is designed to help users manage their bank accounts. It is an iOS app that uses Swift on frontend, C++ and Stripe API on backend.'
                 button-href="https://github.com/innkuika/CashyCash-Frontend"
                 button-text="Frontend GitHub"
@@ -100,6 +106,7 @@
 
         <ika-card
                 title="Stop loss spiral"
+                date="Winter 2020"
                 description='Stop loss spiral is a simple app where gamers can set stopping conditions when they are playing competitive games. They can set how many total matches to play and how many match losses they can tolerate. When the stopping condition is met, the app prompts them to stop playing. They can also save configurations as templates.'
                 button-href="https://github.com/innkuika/StopLossSpiral"
                 button-text="GitHub"
@@ -111,6 +118,7 @@
         </ika-card>
         <ika-card
                 title="Othello (board game)"
+                date="Spring 2020"
                 description='Othello (board game) with a GUI and bots using C++ and Qt.'
                 button-href="https://github.com/innkuika/CISC220LAB3beta"
                 button-text="GitHub"
@@ -126,6 +134,7 @@
 
         <ika-card
                 title="Pill City"
+                date="Summer 2021"
                 description='Pill City is a social network that is packed with features from other social networking sites. It supports circles from Google+, nested threads from Reddit, following from Twitter, and reactions from Facebook. I am mainly responsible for the web frontend, written in JavaScript and React.'
                 button-href="https://github.com/KTachibanaM/pill-city"
                 button-text="GitHub"
@@ -137,6 +146,7 @@
         </ika-card>
         <ika-card
                 title="Shop 'Til You Drop"
+                date="Spring 2021"
                 description='Shop till you drop is a React app that lets users shop for a year of college by putting items into their shopping cart and then tally up the bill when they check out. Pick a school, and see if they can get financial aid.'
                 button-href="https://github.com/innkuika/ShopTillYouDrop"
                 button-text="GitHub"
@@ -150,6 +160,7 @@
 
         <ika-card
                 title="Makimaki Stickers"
+                date="Spring 2021"
                 description='An iMessage sticker pack. Express your feelings with Makimaki.'
                 button-href="https://apps.apple.com/us/app/makimaki-stickers/id1550426134"
                 button-text="App Store"
@@ -160,6 +171,7 @@
 
         <ika-card
                 title="Big-and-small (dice game)"
+                date="Spring 2019"
                 description='The game asks the player to bet big or small using a physical button and display. The player then rolls the dice by shaking the Pi and sees the result on the display. Implemented big-and-small (dice game) on Raspberry Pi using C.'
                 color="dark"
         >
@@ -249,7 +261,10 @@
               ${imageHtml}
 
        <div class="p-8 flex flex-col">
-        <h1 class="text-2xl font-bold">${this.getAttribute("title")}</h1>
+       <div class="flex justify-between content-end">
+       <h1 class="text-2xl font-bold">${this.getAttribute("title")}</h1> <span>${this.getAttribute("date")}</span>
+       </div>
+
         <br>
         <p class="text-xl mt-2">
             ${this.getAttribute("description")}
